@@ -4,7 +4,7 @@ export async function moviesUpdateById(id, data) {
   return await client
     .db("movies")
     .collection("movies")
-    .updateOne({ _id: id }, { $set: data });
+    .updateOne({ _id: ObjectId(id) }, { $set: data });
 }
 export async function moviesDeleteById(id) {
   return await client
