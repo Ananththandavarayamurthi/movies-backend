@@ -12,7 +12,7 @@ export async function moviesDeleteById(id) {
     .deleteOne({ _id: id });
 }
 export async function moviesPost(data) {
-  return await client.db("movies").collection("movies").insertMany(data);
+  return await client.db("movies").collection("movies").insertOne(data);
 }
 export async function moviesGet(request) {
   return await client
